@@ -88,6 +88,15 @@ public class MyArrayList <T> { // <T> тип элементов в массив�
     }
     /* метод сортирует массив в порядке возрастания */
     public void sort () {
+
         Arrays.sort(array, 0, sizeOfArrayList);
+    }
+
+    @Override
+    public String toString() {
+        return "MyArrayList{" +
+                "sizeOfArrayList=" + sizeOfArrayList +
+                ", array=" + Arrays.toString(array) +
+                '}';
     }
 }
