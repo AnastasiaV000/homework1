@@ -2,7 +2,7 @@ package arrayList;
 
 import java.util.Arrays;
 
-public class MyArrayList <T> {
+public class MyArrayList <T> { // <T> тип элементов в массиве
     private int sizeOfArrayList = 0;
     private static final int CAPACITY = 15;
     private Object[] array = new Object[CAPACITY];
