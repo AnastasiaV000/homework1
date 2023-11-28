@@ -18,7 +18,7 @@ public class Main {
         System.out.println(array);
         array.sort();
         System.out.println(array);
-        array.getElement(5);
+        System.out.println(array.getElement(5));
         array.clearArrayList();
     }
 }
