@@ -2,7 +2,7 @@ package arrayList;
 
 import java.util.Arrays;
 
-public class MyArrayList <T> {
+public class MyArrayList <T> { // <T> тип элементов в массиве
     private int sizeOfArrayList = 0;
     private static final int CAPACITY = 15;
     private Object[] array = new Object[CAPACITY];
@@ -66,14 +66,14 @@ public class MyArrayList <T> {
     }
 
     /*
-     * метод выводит элемент по заданному индексу,
+     * метод возвращает элемент по заданному индексу,
      * если он отвечает условию: индекс должен быть меньше, чем длина массива - 1,
      * в противном случае будет выдавать ошибку */
-    public void getElement(int index) {
+    public T getElement(int index) {
         if (index > array.length - 1) {
             throw new IllegalThreadStateException();
         }
-        System.out.println(array[index]);
+        return (T) array[index];
     }
 
     /*
@@ -88,6 +88,15 @@ public class MyArrayList <T> {
     }
     /* метод сортирует массив в порядке возрастания */
     public void sort () {
+
         Arrays.sort(array, 0, sizeOfArrayList);
+    }
+
+    @Override
+    public String toString() {
+        return "MyArrayList{" +
+                "sizeOfArrayList=" + sizeOfArrayList +
+                ", array=" + Arrays.toString(array) +
+                '}';
     }
 }
